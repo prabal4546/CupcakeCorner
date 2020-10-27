@@ -13,6 +13,8 @@
 		9134F1F82543373500FE4F96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9134F1F72543373500FE4F96 /* Preview Assets.xcassets */; };
 		9134F2032543373500FE4F96 /* QuazyCupcakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9134F2022543373500FE4F96 /* QuazyCupcakeTests.swift */; };
 		9134F20E2543373500FE4F96 /* QuazyCupcakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9134F20D2543373500FE4F96 /* QuazyCupcakeUITests.swift */; };
+		916EDDEA254402AF00699AF5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916EDDE9254402AF00699AF5 /* Order.swift */; };
+		916EDDF22547F61C00699AF5 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916EDDF12547F61C00699AF5 /* AddressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		9134F2092543373500FE4F96 /* QuazyCupcakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuazyCupcakeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9134F20D2543373500FE4F96 /* QuazyCupcakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuazyCupcakeUITests.swift; sourceTree = "<group>"; };
 		9134F20F2543373500FE4F96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		916EDDE9254402AF00699AF5 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		916EDDF12547F61C00699AF5 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,9 @@
 				9134F1F22543373000FE4F96 /* ContentView.swift */,
 				9134F1F42543373500FE4F96 /* Assets.xcassets */,
 				9134F1F92543373500FE4F96 /* Info.plist */,
+				916EDDE9254402AF00699AF5 /* Order.swift */,
 				9134F1F62543373500FE4F96 /* Preview Content */,
+				916EDDF12547F61C00699AF5 /* AddressView.swift */,
 			);
 			path = QuazyCupcake;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				916EDDEA254402AF00699AF5 /* Order.swift in Sources */,
+				916EDDF22547F61C00699AF5 /* AddressView.swift in Sources */,
 				9134F1F32543373000FE4F96 /* ContentView.swift in Sources */,
 				9134F1F12543373000FE4F96 /* QuazyCupcakeApp.swift in Sources */,
 			);

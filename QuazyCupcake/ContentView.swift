@@ -7,59 +7,50 @@
 
 import SwiftUI
 
-struct Response:Codable{
-    var results:[Result]
-}
-struct Result:Codable{
-    var trackId:Int
-    var trackName:String
-    var collectionName:String
-    
-}
+
 struct ContentView: View {
-    @State private var results = [Result]()
+    //this object of Order class will be shared by all the screens in the app so that all work with the same data
+    @ObservedObject var order = Order()
+    
+    
     var body: some View {
         NavigationView{
-        List(results,id: \.trackId){item in
-            VStack(alignment:.leading){
-                Text(item.trackName)
-                    .font(.headline)
-                Text(item.collectionName)
-            }
-        }
-        .onAppear(perform: loadData)
-        .navigationTitle("One Direction")
+            Form{
+                Section{
+                    Picker("Select your cupcake type",selection:$order.type){
+                        ForEach(0..<Order.types.count){
+                            Text(Order.types[$0])
+                            
+                        }
+                    }
+                }
+                Section{
+                    Stepper(value: $order.quantity, in: 3...20){
+                        Text("number of cakes: \(order.quantity)")
+                    }
+                }
+                Section{
+                    Toggle(isOn: $order.specialRequestEnabled.animation()){
+                        Text("Any special requests?")
+                    }
+                    if order.specialRequestEnabled{
+                        Toggle(isOn:$order.extraFrosting){
+                            Text("Add extra frosting")
+                        }
+                        Toggle(isOn: $order.addSprinkles) {
+                                  Text("Add extra sprinkles")
+                              }
+                    }
+                }
+                Section{
+                    NavigationLink(destination:AddressView(order: order)){
+                        Text("delivery details")
+                    }
+                }
+            }.navigationBarTitle("Cupcake Corner")
     }
 }
-    func loadData(){
-        //create the url we want to read
-        guard let url = URL(string: "https://itunes.apple.com/search?term=one+direction&entity=song") else{
-            print("invalid url")
-            return
-        }
-        //create a request with the URL
-        let request = URLRequest(url: url)
-        
-        //create and start a networking task
-        URLSession.shared.dataTask(with: request){data,response,error in
-            
-            //check if we got some data from the api
-            if let data = data {
-                //decode the data that we have received
-                if let decodedResponse = try? JSONDecoder().decode(Response.self, from: data){
-                    //we have good data so, go back to main thread
-                    DispatchQueue.main.async {
-                        //update our UI
-                        self.results = decodedResponse.results
-                    }
-                    //everything is working so we can exit
-                    return
-                }
-            }
-            //if we're here means that their was a problem
-            print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
-        }.resume()
-    }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
