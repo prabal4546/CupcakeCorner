@@ -15,6 +15,7 @@
 		9134F20E2543373500FE4F96 /* QuazyCupcakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9134F20D2543373500FE4F96 /* QuazyCupcakeUITests.swift */; };
 		916EDDEA254402AF00699AF5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916EDDE9254402AF00699AF5 /* Order.swift */; };
 		916EDDF22547F61C00699AF5 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916EDDF12547F61C00699AF5 /* AddressView.swift */; };
+		916EDDFC2549446400699AF5 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916EDDFB2549446400699AF5 /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9134F20F2543373500FE4F96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		916EDDE9254402AF00699AF5 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		916EDDF12547F61C00699AF5 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		916EDDFB2549446400699AF5 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				9134F1F02543373000FE4F96 /* QuazyCupcakeApp.swift */,
-				9134F1F22543373000FE4F96 /* ContentView.swift */,
+				916EDDF625493BA900699AF5 /* View */,
 				9134F1F42543373500FE4F96 /* Assets.xcassets */,
 				9134F1F92543373500FE4F96 /* Info.plist */,
-				916EDDE9254402AF00699AF5 /* Order.swift */,
+				916EDDF725493CAA00699AF5 /* Model */,
 				9134F1F62543373500FE4F96 /* Preview Content */,
-				916EDDF12547F61C00699AF5 /* AddressView.swift */,
 			);
 			path = QuazyCupcake;
 			sourceTree = "<group>";
@@ -134,6 +135,24 @@
 				9134F20F2543373500FE4F96 /* Info.plist */,
 			);
 			path = QuazyCupcakeUITests;
+			sourceTree = "<group>";
+		};
+		916EDDF625493BA900699AF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9134F1F22543373000FE4F96 /* ContentView.swift */,
+				916EDDF12547F61C00699AF5 /* AddressView.swift */,
+				916EDDFB2549446400699AF5 /* CheckoutView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		916EDDF725493CAA00699AF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				916EDDE9254402AF00699AF5 /* Order.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +286,7 @@
 			files = (
 				916EDDEA254402AF00699AF5 /* Order.swift in Sources */,
 				916EDDF22547F61C00699AF5 /* AddressView.swift in Sources */,
+				916EDDFC2549446400699AF5 /* CheckoutView.swift in Sources */,
 				9134F1F32543373000FE4F96 /* ContentView.swift in Sources */,
 				9134F1F12543373000FE4F96 /* QuazyCupcakeApp.swift in Sources */,
 			);
